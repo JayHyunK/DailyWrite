@@ -1,0 +1,1556 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+			
+*{
+	margin:0;
+	padding: 0;
+}
+hr{
+	border-color: #FAFAFA;
+}
+
+#wrap{
+	width: 100%;
+	margin: 0 auto;
+	display: flex; 
+	flex-direction: column; 
+	min-height: 100vh;
+}
+#headerBack{
+	flex: 0 0 auto;
+}
+#wbody{
+	flex: 1 1 auto;
+}
+#footer{
+	flex: 0 0 auto;
+}
+a{
+	text-decoration-line: none;
+	color: black;
+}
+p{
+	line-height: 1.7em
+}
+body{
+    min-width: 500px;
+    line-height: 1.6;
+}
+/*=======================================================================*/
+/*============================= header 스타일 =============================*/
+/*=======================================================================*/
+#headerBack{
+	background-image: url(./bgimage/bgBasic-head.png);
+	background-size: 100%;
+}
+#header{
+	width: 100%;
+	display: flex;
+}
+/* 햄버거 버튼 눌릴시 width: 70% */
+.headlayout{
+	flex: 1;
+	padding: 10px;
+}
+
+#gohome{
+	background-image: url(./icon/Home.png);
+	width: 3vw;
+	height: 3vw;	
+	background-size: 3vw;
+	text-align: center;
+	opacity: 0.7;
+}
+#gohome:hover{
+	animation-duration: 0.2s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+#headerbanner{
+	width:100%;
+	height: 2.5vw;	
+}
+#headText{
+	font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+#header-botoom{
+	display: flex;
+}
+#header-botoom div{
+	flex: 1;
+	text-align: center;
+	font-size: 4.5vw;
+	color: white;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+}
+/*=======================================================================*/
+/*============================ 헤더 우측 스타일 =============================*/
+/*=======================================================================*/
+
+#musicButton{
+	background-image: url(./icon/Music-pause.png);
+	width: 3vw;
+	height: 3vw;	
+	background-size: 3vw;
+	display: block;
+	float: right;
+	margin-left: 10px;
+	opacity: 0.7;
+}
+#musicButton:hover{
+	animation-duration: 0.2s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+
+#musicNext{
+	background-image: url(./icon/Music-next.png);
+	width: 3vw;
+	height: 3vw;	
+	background-size: 3vw;
+	display: block;
+	float: right;
+	margin-left: 10px;
+	opacity: 0.7;
+}
+#musicNext:hover{
+	animation-duration: 0.2s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+
+#hambergerMenu{
+	background-image: url(./icon/Menu.png);
+	width: 3vw;
+	height: 3vw;	
+	background-size: 3vw;
+	display: block;
+	float: right;
+	margin-left: 10px;
+	opacity: 0.7;
+}
+#hambergerMenu:hover{
+	animation-duration: 0.2s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+
+#musicBefore{ 
+	background-image: url(./icon/Music-before.png);
+	width: 3vw;
+	height: 3vw;	
+	background-size: 3vw;
+	display: block;
+	float: right;
+	opacity: 0.7;
+}
+#musicBefore:hover{
+	animation-duration: 0.2s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+
+/*=======================================================================*/
+/*============================ 헤더 멤버 =============================*/
+/*=======================================================================*/
+
+#header #headerMember{
+	width: 100px;
+	height: 30px;
+	float: right;
+	
+}
+#header::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+/*=======================================================================*/
+/*============================= body 스타일 =============================*/
+/*=======================================================================*/
+
+#wbody{
+	width: 100%;
+	display: inline-block;
+}
+/* 햄버거 버튼 눌릴시 width: 70% */
+
+#wbody::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+/*=======================================================================*/
+/*============================= footer스타일 =============================*/
+/*=======================================================================*/
+
+#footer{
+	width: calc(100%-20px);
+	display: block;
+	/*background-color: lightgray;*/
+	background-image: url(./bgimage/bgBasic-foot.png);
+	background-size: 100%;
+}
+/* 햄버거 버튼 눌릴시 width: 70% */
+
+#footer div{
+	margin: 0px
+}
+#footerMenu{
+	margin: 0;
+}
+
+#footerMenu div{
+	margin: 0 auto;
+}
+
+#footInMenu{
+	list-style: none;
+	width:100%;
+	text-align: center;
+}
+
+#footInMenu li{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	width:20%;
+	text-align: center;
+	display: inline-block;
+	color: white;
+}
+
+#footInMenu li a{
+	text-align: center;
+	display: inline-block;
+	color: rgb(230,230,250);
+	font-size: 1.2vw;
+}
+#footInMenu li a:hover{
+	animation-duration: 0.2s;
+	animation-name: chososefoot;
+	animation-fill-mode: forwards;
+}
+
+@keyframes chososefoot{
+	from{
+		color: rgb(230,230,250);
+	}
+	to{
+		color: white;
+	}
+} 
+
+#copyright{
+	display: block;
+	padding-top: 1vw;
+	padding-bottom: 2vw;
+	color: rgb(230,230,250);
+	font-size: 1vw;
+	text-align: center;
+	
+}
+
+
+
+/*=======================================================================*/
+/*=============================== 메뉴 스타일 ==============================*/
+/*=======================================================================*/
+
+#menuback{
+	width:100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.2);
+	position:fixed;
+	top:0;
+	left:0;
+	visibility: hidden;
+}
+#menu{
+	width: 35%;
+	visibility: hidden;
+	float: right;
+	background-color: white;
+	height:100vh;
+	font-size: 1.5vw;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+#menuheader{
+	flex: 0 0 auto;
+
+}
+.menuheaderimg{
+	font-size: 1.5vw;
+	padding: 2vw;
+	padding-bottom: 1vw;
+	padding-top: 1vw;
+	width: 100%;
+}
+
+#menubody{
+	flex: 1 1 auto;	
+}
+
+#menufooter{
+	flex: 0 0 auto;
+}
+
+.menuheadertxt{
+	font-size: 1.2vw;
+	padding: 2vw;
+	padding-bottom: 1vw;
+	padding-top: 1vw;
+	width: 100%;
+	margin-top: 2vw;
+	line-height: 1.6;
+}
+
+#menuicon{
+	display: flex;
+	justify-content: right;
+	padding: 2vw;
+	padding-bottom: 1vw;
+	padding-top: 1vw;
+}
+.icon{
+	width: 25%;
+	text-align: center;
+	font-size: 1vw;
+}
+
+#menufooter{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	padding-bottom: 2vw;
+}
+#menufooter div{
+	font-size: 1.2vw;
+	padding: 2vw;
+	padding-bottom: 1vw;
+	padding-top: 1vw;
+	width: 100%;
+}
+
+#menuinimg{
+	width: 35vw;
+	margin: 0 auto;
+	margin-bottom: vw;
+}
+
+.menuslidein{ 
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	
+  	-webkit-animation-name: slidein;
+  	animation-name: slidein;
+}
+
+#infodw{
+	font-size: 1.2vw;
+	padding: 2vw;
+	padding-bottom: 0.5vw;
+	padding-top: 0.5vw;
+	width: 100%;
+}
+
+@-webkit-keyframes slidein{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 35%;
+	}
+}
+@keyframes slidein{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 35%;
+	}
+}
+.menuslideout{ 
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	
+  	-webkit-animation-name: slideout;
+  	animation-name: slideout;
+  	animation-fill-mode: forwards;
+}
+@-webkit-keyframes slideout{
+	from{
+		width: 35%;
+	}
+	to{
+		width: 0%;
+	}
+}
+@keyframes slideout{
+	from{
+		width: 35%;
+	}
+	to{
+		width: 0%;
+	}
+}
+/* 메뉴 팝업에 내이매이션 삽입 */
+
+#menuicon {
+	list-style: none;
+}
+
+.slideinside{
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	
+  	-webkit-animation-name: slideinside;
+  	animation-name: slideinside;
+}
+@-webkit-keyframes slideinside{
+	from{
+		opacity: 0%;
+	}
+	50%{
+		opacity: 0%;
+	}
+	to{
+		opacity: 100%;
+	}
+}
+@keyframes slideinside{
+	from{
+		opacity: 0%;
+	}
+	50%{
+		opacity: 0%;
+	}
+	to{
+		opacity: 100%;
+	}
+}
+
+.slideoutside{
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	
+  	-webkit-animation-name: slideoutside;
+  	animation-name: slideoutside;
+}
+@-webkit-keyframes slideoutside{
+	from{
+		opacity: 100%;
+	}
+	50%{
+		opacity: 0%;
+	}
+	to{
+		
+	}
+}
+@keyframes slideoutside{
+	from{
+		opacity: 100%;
+	}
+	50%{
+		opacity: 0%;
+	}
+	to{
+		
+	}
+}
+
+#hamMenu li{
+	margin-bottom: 20px;
+}
+
+
+/*=======================================================================*/
+/*============================ 글쓰기 창 스타일 =============================*/
+/*=======================================================================*/
+#txtwrap{
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+}
+#txtmenu{
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+	position: sticky;
+	top:0px;
+}
+#editorMenu{
+	display: flex;
+	width: 100%;
+}
+#editorMenu button{
+	flex: 1;
+	border: 0;
+	padding: 1vw;
+	background-color: white;
+	border-radius: 0.5vw;
+	font-size: 1.3vw;
+}
+#editorMenu button:hover{
+	animation-duration: 0.3s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+
+#txtbody{
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+#txtbody div form input{
+	width: 96%;	
+	border: 0px;
+	padding: 2%;
+}
+#editor img{
+	max-width: 100%;
+}
+#editor{
+	width: cacl(100%-6vw);
+	height: 60vh;
+	border: 0px;
+	padding: 3vw;;
+	overflow: auto;
+	resize:none;
+	font-size: 1.3vw;
+	resize: vertical; 
+	overflow:auto;
+}
+#txtfootbar{
+	width: 100%;
+	display: flex;
+	margin-top: 3vw;
+	user-select:none;
+	font-size: 1.3vw;
+}
+#txtfootbar div:nth-child(2){
+	flex: 7;
+}
+
+#gotoList{
+	flex: 1;
+	padding: 1vw;
+	text-align: center;
+	border-radius: 0.5vw;
+}
+#gotoList:hover{
+	animation-duration: 0.3s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+#submittxt{
+	flex: 1;
+	padding: 1vw;
+	text-align: center;
+	border-radius: 0.5vw;
+}
+#submittxt:hover{
+	animation-duration: 0.3s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+#emotionstate {
+	display: flex;
+	width: 100%;
+	user-select:none;
+}
+#emotionstate .emotionchoose{
+	visibility: hidden;
+}
+.emotionchoosebtn{
+	flex: 1;
+	font-size: 1vw;
+	text-align: center;
+	letter-spacing: -0.1vw;
+}
+#paragraph input:first-child{
+	font-size:1.5vw;
+}
+
+#imgSelector{
+	display: none;
+}
+.emoIcon{
+	width: 3vw; 
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5vw;
+}
+
+/*=======================================================================*/
+/*============================= 글목록 스타일 ===============================*/
+/*=======================================================================*/
+
+#listlayout{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 6vh;
+	margin-bottom: 6vh;
+	font-size: 1.3vw;
+}
+.txtList{
+	width: cacl(100%-2vw);
+	display:flex;
+	margin-bottom: 1.5vw;
+	margin-top: 1.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+.none-paragraph{
+	width: cacl(100%-2vw);
+	text-align: center;
+	padding-bottom: 1.8vw;
+	padding-top: 1.8vw;
+	letter-spacing: -0.1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+.txtListcon{
+	width: cacl(100%-2vw);
+	display:flex;
+	padding-bottom: 1.8vw;
+	padding-top: 1.8vw;
+	letter-spacing: -0.1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+.txtListcon:hover{
+	animation-duration: 0.3s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+.txtListTitle{
+	flex: 11;
+}
+#emotionNow{
+	border: 0;
+	flex: 1;
+	text-align: center;
+	font-size: 1.3vw;
+}
+.txtListDate{
+	flex: 5;
+	text-align: right;
+}
+.listCheckBox{
+	flex: 1;
+}
+
+#filter{
+	font-size: 1.1vw;
+	letter-spacing: -0.1vw;
+	border: 0;
+	padding-top: 1.25vw;
+	padding-bottom: 1vw;
+}
+#searchSelect{
+	font-size: 1.1vw;
+	letter-spacing: -0.1vw;
+	border: 0;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	flex: 3;
+}
+#searchText{
+	font-size: 1.1vw;
+	border: 0;
+	flex: 5;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+#searchBtn{
+	font-size: 1.1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	flex: 3;
+	border: 0;
+	border-radius: 0.5vw;
+	background-color: white;
+}
+#searchBtn:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+
+
+#listLayoutFooter{
+	width: 100%;
+	display:flex;
+	margin-bottom: 1vw;
+	margin-top: 2vw;
+	margin-bottom: 3.5vw;
+}
+
+#listLayoutFooter div:first-child{
+	flex: 2;
+	text-align: center;
+	padding: 1vw;
+	border-radius: 0.5vw;
+}
+.ButtonRegular{
+	font-size: 1.1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	flex: 3;
+	border: 0;
+	border-radius: 0.5vw;
+	background-color: white;
+}
+.ButtonRegular:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+#listLayoutFooter div:nth-child(2){
+	flex: 1;
+	font-size: 0;
+}
+#listLayoutFooter div:nth-child(3){
+	flex: 9;
+	display: flex;
+}
+#listLayoutFooter div:nth-child(4){
+	flex: 1;
+}
+#listLayoutFooter div:last-child{
+	flex: 2;
+	padding-right: 0;
+	font-size: 0;
+	/*select 태그다음에 위치한 text 노드 때뭔에 레이아웃 왜곡 생겨서 폰트 사이즈 0으로 줌 */
+}
+#formFilterPgMax{
+	font-size: 0;
+}
+
+#pageNum{
+	display: flex;
+}
+.pageNumDiv{
+	flex: 1;
+}
+#pageNumIn {
+	flex: 6;
+}
+#pageNumIn div{
+	display: flex;
+}
+.pagelist{
+	flex: 1;
+	width: 10%;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	user-select:none;
+	border-radius: 0.2vw;
+}
+.pagelist:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+#nextPage{
+	text-align: right;
+	font-size: 1.1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	border-radius: 0.5vw;
+	text-align: center;
+	user-select:none;
+}
+#beforPage{
+	text-align: left;
+	font-size: 1.1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	border-radius: 0.5vw;
+	text-align: center;
+	user-select:none;
+}
+#nextPage:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+#beforPage:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+.pagelist{
+	text-align: center;
+	justify-content: center;
+}
+#dateASC:hover{
+	color: #a000a0;
+}
+#dateDESC:hover{
+	color: #a000a0;
+}
+#dateASC, #dateDESC{
+	user-select:none;
+}
+/*=======================================================================*/
+/*============================= 글 보기 스타일 ==============================*/
+/*=======================================================================*/
+
+#textViewContent{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 6vh;
+	margin-bottom: 6vh;
+	font-size: 1.3vw;
+}
+#textVhead{
+	padding-top: 2vw;
+	padding-bottom: 1.5vw;
+	border-bottom: 0.5px solid lightgray;
+}
+#textVheadlight{
+	padding-left: 1vw;
+	font-size: 3vw;
+	color: black;
+	/*text-align: center;*/
+	margin-bottom: 2vw;
+}
+#textVheadSub{
+	display: flex;
+	color: gray;
+}
+#textVheadDate{
+	font-size: 1vw;
+	text-align: right;	
+	letter-spacing: -0.05vw;
+}
+#textVheadSub div:first-child{
+	flex: 1;
+	padding-left: 1vw;
+}
+#textVheadSub div:nth-child(2){
+	flex: 1;
+}
+#textVheadSub div:last-child{
+	flex: 1;
+	padding-right: 1vw;
+}
+#textVbody{
+	padding: 2vw;
+	font-size: 1.3vw;
+	min-height: 33vh;
+	margin-top: 3vw;
+}
+#textVfooter{
+	display: flex;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	font-size: 1.3vw;
+	user-select:none;
+}
+.tvfflex{
+	user-select:none;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	border-radius: 1vw;
+}
+#textVfooter div:first-child{
+	flex: 3;
+	text-align: center;
+}
+#textVfooter div:nth-child(2){
+	flex: 9;
+}
+#textVfooter div:nth-child(3){
+	flex: 3;
+	text-align: center;
+}
+#textVfooter div:nth-child(4){
+	flex: 3;
+	text-align: center;
+}
+#textVfooter div:last-child{
+	flex: 3;
+	text-align: center;
+}
+
+.tvfflex:first-child:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+.tvfflex:nth-child(3):hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+.tvfflex:nth-child(4):hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+.tvfflex:last-child:hover{
+	animation-duration: 0.5s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+
+@keyframes chooseBtn{
+	from{
+		
+	}
+	to{
+		background-color: #fbf3ff;
+	}
+}
+
+/*=======================================================================*/
+/*=========================== 관리자 페이지 스타일 ============================*/
+/*=======================================================================*/
+
+#memberListlayout{
+	width: 80%;
+	margin: 0 auto;
+}
+.memberList{
+	width: 100%;
+	display:flex;
+	padding-bottom: 2vw;
+	padding-top: 2vw;
+}
+.memberId{
+	flex: 5;
+}
+.memberBar{
+	flex: 6;
+}
+.memberDate{
+	flex: 4;
+	text-align: right;
+}
+
+#memberListLayoutFooter{
+	width: 100%;
+	display:flex;
+	margin-bottom: 1vw;
+	margin-top: 2vw;
+}
+
+#memberListLayoutFooter div:first-child{
+	flex: 10;
+	display: flex;
+}
+#memberListLayoutFooter div:last-child{
+	flex: 2;
+	
+}
+#memberPageNum{
+	display: flex;
+}
+.memberPageNumDiv{
+	flex: 1;
+}
+#memberPageNumIn {
+	flex: 6;
+}
+#memberPageNumIn div{
+	display: flex;
+}
+.memberPagelist{
+	flex: 1;
+	width: 10%;
+	text-align: center;
+	justify-content: center;
+}
+#memberNextPage{
+	text-align: right;
+}
+#memberBeforPage{
+	text-align: left;
+}
+/* 메뉴 스타일 중 아이콘은 스타일이 인라인으로 들어가 있음 */
+/* 선택자 권한 문제로, 자바 스크립트를 통해 일부 기능을 구현하여 아이디 및 클래스로 조정이 불가능함 */
+.memberFix{
+	display: none;
+}
+.memberFixLayout{
+	font-size: 1vw;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.memberFixLayout1{
+	width: 25%;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+}
+.memberFixLayout2{
+	width: 75%;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+}
+.memberFixLayout3{
+	width: 50%;
+	margin-top: 0.5vw;
+	margin-bottom: 1vw;
+}
+.memberFixLayout4{
+	width: 10%;
+	margin-top: 0.5vw;
+	margin-bottom: 1vw;
+}
+.memberFixLayout5{
+	width: 20%;
+	margin-top: 1vw;
+	margin-top: 0.5vw;
+	margin-bottom: 1vw;
+}
+.memberFixSubmit{
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	border: 0;
+	font-size: 1vw;
+	padding: 1vw;
+	border-radius: 0.5vw;
+}
+.memberFixSubmit:hover{
+	animation-duration: 0.3s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+.memberFixInput{
+	border: 0;
+	font-size: 1vw;
+	background-color: #FAFAFA ;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
+	margin-left: -1vw;
+}
+/*=======================================================================*/
+/*=========================== 인덱스 스타일 ============================*/
+/*=======================================================================*/
+
+#start{
+	width: 20%;
+	height: 5vh;
+	background-image: url(./bgimage/bgBasic-head.png);
+	background-size: 100%;
+}
+
+/*=======================================================================*/
+/*=========================== Content1 스타일 ============================*/
+/*=======================================================================*/
+
+.headlight{
+	font-size: 2vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.headlight-sub{
+	font-size: 1vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+
+.normalLine{
+	width: 88%;
+	opacity: 0.5;
+	margin: 0 auto;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+}
+
+.shortLine{
+	width: 20%;
+	opacity: 0.5;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.condiv{
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 5vw;
+}
+.conul{
+	display: flex;
+	list-style: none;
+}
+.conli{
+	flex: 5;
+	font-size: 0.8vw;
+}
+
+.conliBetween{
+	flex: 1;
+}
+
+.conspan{
+	font-size: 1vw;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.conimg-big{
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 1vw;
+	margin-bottom: 1vh;
+	display: block;
+}
+.conimg-big img{
+	width: 100%;
+	border-radius: 1vw;
+	display: block;
+}
+
+#conimg-start{
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin-bottom: 10vh;
+	font-size: 0.5vw;
+	text-align: center;
+	color: rgba(0,0,0, 0.5);
+}
+#conimg-start img{
+	width: 80%;
+}
+
+.conliimg{
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+/*=======================================================================*/
+/*============================ login 창 스타일 =============================*/
+/*=======================================================================*/
+
+#login{
+	width: 50%;
+	margin: 0 auto;
+	padding: 1vw;
+	background-color: rgba(72, 61, 139, 0.1);
+	border-radius: 1vw;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+}
+#login form{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.inputsize{
+	width: 22vw;
+	padding: 1.5vw;
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	font-size: 1.3vw;
+	background-color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 0.5vw;
+	border-radius: 0.5vw;
+}
+.input-submit{
+	width: 25vw;
+	padding: 1.5vw;
+	display: block;
+	border: 0;
+	font-size: 1.3vw;
+	color: white;
+	opacity: 0.7;
+	background-image: url(./bgimage/bgBasic-head.png);
+	background-size: 100%;
+	margin-bottom: 1vw;
+	border-radius: 0.5vw;
+}
+.input-submit:hover{
+	animation-duration: 0.5s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+@keyframes choose{
+	from{
+		opacity: 0.7;
+	}
+	to{
+		opacity: 1;
+	}
+} 	
+.nomalimg{
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+
+#loginbottom{
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	margin-bottom: 5vw;
+}
+#loginbottom a{
+	flex:1;
+	font-size: 1vw;
+	text-align: center;
+	color: gray;
+}
+
+#loginbottom a:hover{
+	animation-duration: 0.2s;
+	animation-name: choosetext;
+	animation-fill-mode: forwards;
+}
+@keyframes choosetext{
+	from{
+		color: gray;
+	}
+	to{
+		color: black;
+	}
+}
+/*=======================================================================*/
+/*============================ 회원가입 창 스타일 =============================*/
+/*=======================================================================*/
+
+#register{
+	width: 50%;
+	margin: 0 auto;
+	padding: 1vw;
+	background-color: rgba(72, 61, 139, 0.1);
+	border-radius: 1vw;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+}
+
+#register form{
+	width: 50%;
+	margin: 0 auto;
+}
+#register input{
+	font-size: 1.3vw;
+}
+#checkidbtn{
+	padding: 1.5vw;
+	display: block;
+	border: 0;
+	font-size: 1.3vw;
+	opacity: 0.7;
+	background-color: rgba(237, 172, 177, 0.5);
+	margin-bottom: 0.5vw;
+	border-radius: 0.5vw;
+	text-align: center;
+	color: gray;
+	max-width: 10vw;
+}
+#checkidbtn:hover{
+	animation-duration: 0.2s;
+	animation-name: choose;
+	animation-fill-mode: forwards;
+}
+
+.selectsize{
+	width: 25vw;
+	padding: 1.5vw;
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	color: gray;
+	font-size: 1.1vw;
+	background-color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 0.5vw;
+	border-radius: 0.5vw;
+}
+#regiid{
+	display:flex;
+	width: 25vw;
+}
+#regiid input:first-child{
+	flex: 5;
+}
+#regiid input:last-child{
+	flex: 2;
+}
+#FormId{
+	min-width: 10vw;
+}
+
+/*=======================================================================*/
+/*============================== 회원 관리 페이지 ===============================*/
+/*=======================================================================*/
+
+.formdiv{
+	width: 50%;
+	margin: 0 auto;
+	padding: 1vw;
+	background-color: rgba(72, 61, 139, 0.1);
+	border-radius: 1vw;
+}
+.TopObject{
+	margin-top: 5vw;
+}
+
+.formdiv form{
+	width: 50%;
+	margin: 0 auto;
+}
+.formdiv input{
+	font-size: 1.3vw;
+}
+#delButton{
+	width: 25vw;
+	padding: 1.5vw;
+	display: block;
+	border: 0;
+	font-size: 1.3vw;
+	color: white;
+	opacity: 0.3;
+	background-image: url(./bgimage/bgBasic-head.png);
+	background-size: 100%;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	border-radius: 0.5vw;
+}
+#delButton:hover{
+	animation-duration: 0.7s;
+	animation-name: choosedelButton;
+	animation-fill-mode: forwards;
+}
+@keyframes choosedelButton{
+	from{
+		opacity: 0.3;
+	}
+	to{
+		opacity: 1;
+	}
+} 	
+
+/*=======================================================================*/
+/*============================== 푸터 콘텐츠 ===============================*/
+/*=======================================================================*/
+
+.contentFooter{
+	width: 60%;
+	margin: 0 auto;
+	padding: 2vw;
+	background-color: rgba(72, 61, 139, 0.1);
+	border-radius: 1vw;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+}
+
+/*=======================================================================*/
+/*============================== 스크롤바 ==================================*/
+/*=======================================================================*/
+
+#editor::-webkit-scrollbar{
+	width: 1vw;
+}
+#editor::-webkit-scrollbar-thumb {
+    background-color: #fbf3ff;
+    border-radius: 0.5vw;
+    background-clip: padding-box;
+}
+#editor::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 1vw;
+}
+
+/*=======================================================================*/
+/*================================= 통계 =================================*/
+/*=======================================================================*/
+
+#Statistics{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 6vh;
+	margin-bottom: 6vh;
+	font-size: 1.3vw;
+}
+.St-headlight{
+	font-size: 2vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.St-headlight-sub{
+	font-size: 1vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.St-conspan{
+	font-size: 1vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.St-conul{
+	display: flex;
+	list-style: none;
+}
+.St-conli{
+	flex: 5;
+	font-size: 0.8vw;
+	user-select:none;
+}
+.St-conimg{
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+.St-conliBetween{
+	flex: 1;
+}
+.St-conliimg{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.St-conliSubtitle{
+	font-size: 1vw;
+	text-align: center;
+}
+#St-conimg-foot{
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin-bottom: 10vh;
+	font-size: 0.5vw;
+	text-align: center;
+	color: gray;
+	letter-spacing: -0.1vw
+}
+#St-conimg-foot img{
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+}
+.suggestBtn{
+	flex: 5;
+	font-size: 0.8vw;
+	user-select:none;
+	padding: 1vw;
+	border-radius: 1vw;
+}
+.suggestBtn:hover{
+	animation-duration: 0.3s;
+	animation-name: chooseBtn;
+	animation-fill-mode: forwards;
+}
+
+/*=======================================================================*/
+/*================================= 메인 =================================*/
+/*=======================================================================*/
+
+.headlight-middle{
+	font-size: 1.6vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.headlight-sub-middle{
+	font-size: 1.3vw;
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.conliText{
+	font-size: 1.1vw;
+	margin-bottom: 0.5vw;
+	text-align: center;
+}
+.conspan-main{
+	font-size: 1vw;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	user-select: none;
+}
+
+.conspan-main:hover{
+	animation-duration: 0.5s;
+	animation-name: choose-con;
+	animation-fill-mode: forwards;
+}
+@keyframes choose-con{
+	from{
+		
+	}
+	to{
+		color: #5900a3;
+	}
+}
+/*=======================================================================*/
+/*============================= 관리자 페이지 ===============================*/
+/*=======================================================================*/
+#adminIndiv{
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+}
+
+/*=======================================================================*/
+/*======================= 아이디 비밀번호 찾기 페이지 ==========================*/
+/*=======================================================================*/
+
+#findpwdiv{
+	width: 50%;
+	margin: 0 auto;
+	padding: 1vw;
+	background-color: rgba(72, 61, 139, 0.1);
+	border-radius: 1vw;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+}
+#findpwdiv form{
+	width: 50%;
+	margin: 0 auto;
+}
